@@ -10,7 +10,7 @@ alias vi='mvim -v'
 ZSH_THEME="agnoster"
 
 # EXPORTS:
-export GOPATH=~/Dropbox/projects/go-work
+export GOPATH=~/go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/Applications/Wine\ Stable.app/Contents/Resources/wine/bin
 
