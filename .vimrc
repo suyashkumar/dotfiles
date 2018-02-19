@@ -21,7 +21,6 @@ imap <C-Return> <CR><CR><C-o>k<Tab>
 set autoindent
 set tabstop=4 
 map! <D-C> <F5>
-let g:vim_arduino_library_path = "/Applications/Arduino.app/Contents/MacOS"
 autocmd BufNewFile,BufRead *.md set filetype=markdown
 autocmd BufNewFile,BufRead *.md let pdfF = expand("%:r") . ".pdf" 
 autocmd BufNewFile,BufRead *.tex let fi = expand("%:r")  
@@ -31,11 +30,10 @@ autocmd BufNewFile,BufRead *.m map <buffer> <C-n> :w <CR> :execute ":!octave --n
 autocmd BufNewFile,BufRead *.tex map <buffer> <C-b> :w <CR> :execute ':!bibtex ' . fi <CR>  :! pdflatex % <CR>
 autocmd BufNewFile,BufRead *.tex map <buffer> <C-n> :execute ':!aspell --lang=en --mode=tex check %' 
 autocmd BufNewFile,BufRead *.ino map <buffer> <C-b> :w <CR> :!pio run <CR>
-"autocmd BufNewFile,BufRead *.ino map <buffer> <C-n> :w <CR> :!pio run --target upload <CR>
 map <silent> <C-n> :NERDTreeFocus<CR>
 set sw=4
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/](doc|tmp|node_modules)',
+  \ 'dir':  '\v[\/](doc|tmp|node_modules|vendor)',
     \ 'file': '\v\.(exe|so|dll)$',
 	  \ }
 let g:go_fmt_command = "goimports"
