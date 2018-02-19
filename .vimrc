@@ -3,7 +3,6 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'flazz/vim-colorschemes'
@@ -16,7 +15,6 @@ colorscheme solarized
 let g:rehash256=1
 set number
 set guifont=Menlo:h12
-execute pathogen#infect()
 imap <C-Return> <CR><CR><C-o>k<Tab>
 set autoindent
 set tabstop=4 
